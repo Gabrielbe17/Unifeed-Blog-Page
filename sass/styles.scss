@@ -81,24 +81,10 @@ main{
         }
 
     article{
-        @include bgArt();
 
         img{
             width: 100%;
             height: auto;
-        }
-        // Articles Image
-        .bg-image-1{
-            background: url(../Assets/MainArticleImage.png) no-repeat;
-        }
-        .bg-image-2{
-            background: url(../Assets/Article-1-Image.png) no-repeat;
-        }
-        .bg-image-3{
-            background: url(../Assets/Article-2-Image.png) no-repeat;
-        }
-        .bg-image-4{
-            background: url(../Assets/Article-3Image.png) no-repeat;
         }
         // Profile 
         .profile{

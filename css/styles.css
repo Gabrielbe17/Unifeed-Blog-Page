@@ -72,25 +72,9 @@ header .toggle-menu {
     gap: 3em;
   }
 }
-main article .bg-image {
-  width: 100%;
-  height: 18em;
-}
 main article img {
   width: 100%;
   height: auto;
-}
-main article .bg-image-1 {
-  background: url(../Assets/MainArticleImage.png) no-repeat;
-}
-main article .bg-image-2 {
-  background: url(../Assets/Article-1-Image.png) no-repeat;
-}
-main article .bg-image-3 {
-  background: url(../Assets/Article-2-Image.png) no-repeat;
-}
-main article .bg-image-4 {
-  background: url(../Assets/Article-3Image.png) no-repeat;
 }
 main article .profile {
   display: flex;

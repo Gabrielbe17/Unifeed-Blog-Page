@@ -13,12 +13,3 @@
     justify-content: $justify;
 }
 
-// Backround Articles
-@mixin bgArt {
-    .bg-image{
-        width: 100%;
-        height: 18em;
-        // background-size: cover;
-    }
-}
-
