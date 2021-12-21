@@ -1,0 +1,136 @@
+@use 'abstracts/index' as *;
+
+html{
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+// General Styles
+
+h1, h2{
+    font-size: clamp(16px, 5vw, 30px);
+}
+
+nav, footer{
+    @include flex(row, space-between);
+}
+.text{
+    color: $silver;
+    line-height: 1.6em;
+}
+
+// Container
+.container{
+    min-height: 100vh;
+    width: 100%;
+    max-width: 90em;
+    margin: 0 auto;
+
+    & > *{
+        padding: 1em;
+    }
+}
+// Header Section
+header{
+
+    ul{
+        list-style-type: none;
+        @include flex(row, none);
+        gap: 1em;
+
+        li{
+            cursor: pointer;
+            transition: opacity, transform .25s ease-in-out;
+
+            &:hover{
+                opacity: .85;
+                transform: scale(1.1);
+            }
+        }
+
+        .active{
+            background-color: $darkOrange;
+            font-weight: 600;
+            padding: 1em;
+            border-radius: .55em;
+        }
+
+        @media screen and (max-width:650px) {
+            display: none;
+        }
+    }
+
+    .toggle-menu{
+        display: none;
+
+        @media screen and (max-width:650px) {
+            display: flex;
+        }
+    }
+}
+//Main Section
+main{
+       // Main Article 
+       .main-article{
+
+        @media screen and (min-width:1100px) {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3em;
+        }
+        }
+
+    article{
+        @include bgArt();
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+        // Articles Image
+        .bg-image-1{
+            background: url(../Assets/MainArticleImage.png) no-repeat;
+        }
+        .bg-image-2{
+            background: url(../Assets/Article-1-Image.png) no-repeat;
+        }
+        .bg-image-3{
+            background: url(../Assets/Article-2-Image.png) no-repeat;
+        }
+        .bg-image-4{
+            background: url(../Assets/Article-3Image.png) no-repeat;
+        }
+        // Profile 
+        .profile{
+            @include flex(row, none);
+            gap: 1.5em;
+
+
+            p{
+                @include flex(column, none);
+                gap: .2em;
+            }
+            span{opacity: .55;}
+        }
+
+        .profile-img{
+            max-width: 4.65em;
+        }
+    }
+
+    .secondary{
+        @media screen and (min-width:1100px) {
+            @include grid;
+            gap: 3em;
+            padding-top: 4em;
+        }
+    }   
+
+    & > *{
+        padding: 1em;
+    }
+}
+///Footer Section
+footer{
+    flex-wrap: wrap;
+}
